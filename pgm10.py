@@ -3,6 +3,7 @@ AIM
 
 To develop a Python program to implement K-Means Clustering using the Wisconsin Breast Cancer dataset and to visualize the clustering results using PCA.
 
+
 import matplotlib.pyplot as plt, seaborn as sns, pandas as pd
 from sklearn.datasets import load_breast_cancer
 from sklearn.cluster import KMeans
@@ -23,10 +24,10 @@ p = PCA(2)
 df = pd.DataFrame(p.fit_transform(X), columns=['PC1','PC2'])
 df['C'], df['T'] = y_k, y
 
-sns.scatterplot(data=df, x='PC1', y='PC2', hue='C'); plt.show()
-sns.scatterplot(data=df, x='PC1', y='PC2', hue='T'); plt.show()
+sns.scatterplot(data=df, x='PC1', y='PC2', hue='C');plt.title("k-mean"); plt.show()
+sns.scatterplot(data=df, x='PC1', y='PC2', hue='T');plt.title("cluster"); plt.show()
 
 c = p.transform(k.cluster_centers_)
 sns.scatterplot(data=df, x='PC1', y='PC2', hue='C')
-plt.scatter(c[:,0], c[:,1], c='red', marker='X'); plt.show()
+plt.scatter(c[:,0], c[:,1], c='red', marker='X'); plt.title("centroid"); plt.show()
 plt.show()
