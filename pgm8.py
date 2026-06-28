@@ -1,7 +1,3 @@
-Program 8: 
-AIM: Develop a program to demonstrate the working of the decision tree algorithm. Use Breast Cancer 
-Data set for building the decision tree and apply this knowledge to classify a new sample. 
-
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_breast_cancer
 from sklearn.model_selection import train_test_split
