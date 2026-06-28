@@ -7,7 +7,7 @@ iris = load_iris()
 X, y = iris.data, iris.target
 
 # Apply PCA
-X_pca = PCA(n_components=2).fit_transform(X)
+X_pca = PCA(2).fit_transform(X)
 
 # Plot reduced data
 for i, name in enumerate(iris.target_names):
