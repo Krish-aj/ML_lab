@@ -28,7 +28,7 @@ print("R^2 Score:", r2_score(y_test, y_pred))
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # 1. MINIMAL CHANGE: Make it a polynomial model instead of strictly linear
-model = make_pipeline(PolynomialFeatures(degree=2), LinearRegression()).fit(X_train, y_train)
+model = make_pipeline(PolynomialFeatures(2), LinearRegression()).fit(X_train, y_train)
 y_pred = model.predict(X_test)
 
 # 2. MINIMAL CHANGE: Plot predictions as red dots (scatter) instead of a line (plot)
